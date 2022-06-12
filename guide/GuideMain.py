@@ -1,3 +1,6 @@
+import logging
+import time
+
 from holon.HolonicAgent import HolonicAgent
 from guide.visual.Visual import Visual
 from guide.hearing.Hearing import Hearing
@@ -13,4 +16,10 @@ class GuideMain(HolonicAgent) :
         self.head_agents.append(Visual())
         self.head_agents.append(Hearing())
         self.head_agents.append(Voice())
+
+    def _run(self):
+        logging.info(f"Run GuideMain")
+        time.sleep(2)
+
+
         

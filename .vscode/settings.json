@@ -1,3 +1,7 @@
 {
-    "editor.fontSize": 12
+    "editor.fontSize": 12,
+    "files.exclude": {
+        "*/__pycache__/": true
+    },
+    "python.defaultInterpreterPath": "/Users/xumingfang/miniforge3/envs/abdi/bin/python"
 }
