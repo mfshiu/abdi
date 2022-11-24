@@ -5,6 +5,21 @@
 In this study, inspired by the physiological operation of the human body, an efficient and resilient software framework was developed to aid in the integration of mature AI technologies, allowing them to coordinate with one another to accomplish more advanced goals. A navigation system for the visually impaired was then developed to validate the framework, with promising experimental results. This framework can be applied to other types of AI systems.
 
 
+## Instruction
+1. Install the required packages.
+````
+pip install -r requirements.txt
+````
+2. Create config.py, rewite the MQTT settings. 
+````
+cp config.sample.py config.py
+````
+3. Start the framework.
+````
+python start.py
+````
+
+
 ## Class Diagram
 The class diagram of the integration of agents and coordination. HolonicAgent represents the core, and HeadAgents and BodyAgents represent the collection of head agents and subagents, respectively. MQTT is the fundamental communication protocol for agents in the global circulation system, and MqttClient is a private member of HolonicAgent, which allows the agent to have built-in MQTT connection and reception capabilities.
 
