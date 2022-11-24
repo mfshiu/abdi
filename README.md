@@ -18,6 +18,6 @@ All agents inherit from HolonicAgent to form a hierarchical structure, and they 
 ## Sequence Diagram
 According to the sequence diagram depicted in below, the DDS and MQTT serve to transmit messages for the agents. Action 1 entails generating an independent process immediately after the root agent is initialized. Action 2 entails subscribing to or publishing relevant topics within the QoS constraints. Action 3 entails recursively calling all the subagents to initiate the action. The agent main action is performed in a separate process of Action 2 until it is notified of its termination. Finally, Action 4 entails generating a global broadcast with MQTT, with a system termination notification serving as an example in this study.
 <figure>
-    <img src="https://i.imgur.com/6lA3w1X.png" height=600>
+    <img src="https://i.imgur.com/6lA3w1X.png" height=500>
     <figcaption>Sequence Diagram of Integration</figcaption>
 </figure>
