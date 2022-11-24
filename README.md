@@ -1,7 +1,6 @@
 # Physiologically Inspired Framework for Complex System Integration
 
 
-
 ## Introduction
 In this study, inspired by the physiological operation of the human body, an efficient and resilient software framework was developed to aid in the integration of mature AI technologies, allowing them to coordinate with one another to accomplish more advanced goals. A navigation system for the visually impaired was then developed to validate the framework, with promising experimental results. This framework can be applied to other types of AI systems.
 
@@ -18,7 +17,6 @@ All agents inherit from HolonicAgent to form a hierarchical structure, and they 
 
 ## Sequence Diagram
 According to the sequence diagram depicted in below, the DDS and MQTT serve to transmit messages for the agents. Action 1 entails generating an independent process immediately after the root agent is initialized. Action 2 entails subscribing to or publishing relevant topics within the QoS constraints. Action 3 entails recursively calling all the subagents to initiate the action. The agent main action is performed in a separate process of Action 2 until it is notified of its termination. Finally, Action 4 entails generating a global broadcast with MQTT, with a system termination notification serving as an example in this study.
-
 <figure>
     <img src="https://i.imgur.com/6lA3w1X.png" width="600">
     <figcaption>Sequence Diagram of Integration</figcaption>
