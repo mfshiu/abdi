@@ -10,7 +10,7 @@ The class diagram of the integration of agents and coordination. HolonicAgent re
 
 All agents inherit from HolonicAgent to form a hierarchical structure, and they use the DDS to achieve neural message transmission depending on their specific behavior. Each super-agent is a DDS domain that publishes or subscribes to related topics with the required QoS, such as the DEADLINE policy to confirm the date of the data or the TRANSPORT_PRIORITY policy to define the transmission priority order, in order to achieve the purpose of a specific agent.
 <figure>
-    <img src="https://i.imgur.com/9vIa7JH.png" width="600">
+    <img src="https://i.imgur.com/9vIa7JH.png" height=500>
     <figcaption>Class diagram of integration</figcaption>
 </figure>
 
@@ -18,6 +18,6 @@ All agents inherit from HolonicAgent to form a hierarchical structure, and they 
 ## Sequence Diagram
 According to the sequence diagram depicted in below, the DDS and MQTT serve to transmit messages for the agents. Action 1 entails generating an independent process immediately after the root agent is initialized. Action 2 entails subscribing to or publishing relevant topics within the QoS constraints. Action 3 entails recursively calling all the subagents to initiate the action. The agent main action is performed in a separate process of Action 2 until it is notified of its termination. Finally, Action 4 entails generating a global broadcast with MQTT, with a system termination notification serving as an example in this study.
 <figure>
-    <img src="https://i.imgur.com/6lA3w1X.png" width="600">
+    <img src="https://i.imgur.com/6lA3w1X.png" height=600>
     <figcaption>Sequence Diagram of Integration</figcaption>
 </figure>
